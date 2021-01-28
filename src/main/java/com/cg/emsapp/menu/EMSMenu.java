@@ -4,10 +4,13 @@ import java.util.Scanner;
 
 import com.cg.emsapp.daoimpl.EmployeeDAOImpl;
 import com.cg.emsapp.domain.Employee;
+import com.cg.emsapp.serviceimpl.EmployeeServiceImpl;
 
 public class EMSMenu {
 	
+	
 	public void start() {
+		
 		int choice;
 		String continueChoice;
 		Scanner sc=  new Scanner(System.in);
@@ -24,11 +27,17 @@ public class EMSMenu {
 				System.out.println("Enter Employee Name");
 				employee.setName(sc.next());
 				
-				EmployeeDAOImpl employeeDaoImpl = new EmployeeDAOImpl();
-				employeeDaoImpl.create(employee);
+//				EmployeeDAOImpl employeeDaoImpl = new EmployeeDAOImpl();
+				EmployeeServiceImpl employeeServiceImpl = new EmployeeServiceImpl();
+				employeeServiceImpl.create(employee);
 				System.out.println("Employee Registered Successfully!");
 				break;
 			case 2:
+//				System.out.println("Enter Employee ID to be deleted ");
+//				employee.setId(sc.nextInt());
+//				employeeDaoImpl.delete(employee);
+//				
+				
 				
 				break;
 			case 3:

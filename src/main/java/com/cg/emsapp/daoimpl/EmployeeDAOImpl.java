@@ -5,6 +5,7 @@ import java.util.List;
 import com.cg.emsapp.dao.EmployeeDAO;
 import com.cg.emsapp.domain.Employee;
 import com.cg.emsapp.util.DBUtil;
+import com.cruddemo.model.UserDetail;
 
 public class EmployeeDAOImpl extends DBUtil implements EmployeeDAO {
 
@@ -20,13 +21,18 @@ public class EmployeeDAOImpl extends DBUtil implements EmployeeDAO {
 
 	@Override
 	public void update(Employee employee) {
-		// TODO Auto-generated method stub
+		
 
 	}
 
 	@Override
 	public void delete(Employee employee) {
-		// TODO Auto-generated method stub
+//		entityManager.getTransaction().begin();
+//		entityManager.find(Employee.class,employee.getId());
+//		entityManager.remove(employee);
+//		entityManager.getTransaction().commit();
+//		entityManager.close();
+//		entityManagerFactory.close();
 
 	}
 
